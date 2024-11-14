@@ -1,0 +1,19 @@
+HTML Questions and Answer
+
+1.  What is HTML and why is it used? 
+--> HTML (HyperText Markup Language) is the standard language for creating web pages. 
+    It describes the structure of a webpage using markup. HTML elements are the building 
+    blocks of HTML pages, and they are represented by tags.
+
+2.  What are the different types of lists in HTML? 
+--> HTML supports three types of lists:
+     -  Ordered List (`<ol>`) : A list of items in a specific order, typically numbered.
+     -  Unordered List (`<ul>`) : A list of items in no particular order, typically bulleted.
+     -  Definition List (`<dl>`) : A list of terms and their definitions.
+
+3.  How do you create a hyperlink in HTML? 
+--> We can create a hyperlink using the `<a>` tag. The `href` attribute specifies the URL of 
+    the page the link goes to. 
+    Example:
+         <a href="https://www.example.com">Visit Example</a>
+    
