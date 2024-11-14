@@ -1,0 +1,62 @@
+<!--
+**What is Sass?**
+
+Sass, or Syntactically Awesome Style Sheets, is a CSS preprocessor that extends the functionality of CSS by adding features like variables, mixins, nesting, and more. It allows developers to write more organized, efficient, and maintainable CSS code.
+
+**How Sass Differs from Regular CSS**
+
+While regular CSS is a straightforward language for styling web pages, Sass offers several advantages:
+
+1. **Variables:** You can define variables to store reusable values like colors, fonts, and spacing. This makes it easier to maintain consistency and update styles globally.
+2. **Nesting:** Sass allows you to nest CSS rules, mirroring the HTML structure. This can improve code readability and organization.
+3. **Mixins:** You can create reusable blocks of CSS code, called mixins, to apply multiple properties to multiple selectors.
+4. **Partials:** You can split your Sass code into smaller, modular files (partials) and import them into your main Sass file. This helps with organization and code reuse.
+5. **Functions:** You can define custom functions to perform calculations or manipulate values, making your code more dynamic.
+
+**Example Sass File**
+
+```scss
+// variables.scss
+$primary-color: #333;
+$secondary-color: #f00;
+
+// button.scss
+.button {
+  background-color: $primary-color;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: $secondary-color;
+  }
+}
+
+// main.scss
+@import "variables";
+@import "button";
+```
+
+**Compiled CSS**
+
+```css
+.button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #f00;
+}
+```
+
+**Notable Differences:**
+
+- **Variables:** Sass variables are replaced with their actual values during compilation, resulting in clean and concise CSS.
+- **Nesting:** Sass nesting is flattened into standard CSS selectors, making the code more readable and maintainable.
+- **Partials and Imports:** Sass allows you to organize your code into smaller, reusable files, improving modularity and code reuse.
+
+By using Sass, you can write more efficient, maintainable, and expressive CSS code, ultimately leading to better-looking and more responsive websites.
+-->

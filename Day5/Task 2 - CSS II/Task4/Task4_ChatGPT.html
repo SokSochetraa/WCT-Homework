@@ -1,0 +1,140 @@
+<!--
+### Using Variables and Functions in Sass
+
+**Variables** and **functions** in Sass enable the creation of reusable, consistent values and logic across stylesheets. Variables store values (e.g., colors, font sizes) that can be referenced throughout the styles, while functions perform calculations or operations and return values based on arguments. Both improve maintainability, making it easier to apply consistent styling across large projects.
+
+### Example of Declaring and Using Variables in Sass
+
+In Sass, variables are defined using the `$` symbol.
+
+```scss
+// Define variables for colors and font sizes
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-size-large: 24px;
+$font-size-small: 14px;
+
+body {
+    color: $primary-color;
+    font-size: $font-size-large;
+}
+
+.footer {
+    background-color: $secondary-color;
+    font-size: $font-size-small;
+}
+```
+
+In this example:
+- `$primary-color`, `$secondary-color`, `$font-size-large`, and `$font-size-small` are Sass variables.
+- These variables make it easy to change the primary and secondary colors and font sizes in one place, affecting the entire stylesheet.
+
+### Sass Functions
+
+Sass functions allow for logic and calculations. Sass includes a set of built-in functions (e.g., `lighten`, `darken`, `mix`) and also supports custom function creation using `@function`.
+
+#### Example of a Custom Function in Sass
+
+```scss
+// Custom function to calculate padding based on input
+@function calculate-padding($padding) {
+    @return $padding * 1.5; // Increases the input padding by 50%
+}
+
+// Variables
+$base-padding: 10px;
+
+.container {
+    padding: calculate-padding($base-padding); // Applies 15px padding
+    background-color: $primary-color;
+}
+```
+
+In this example:
+- `@function calculate-padding` takes an input (`$padding`), multiplies it by `1.5`, and returns the result.
+- The `.container` class applies `calculate-padding($base-padding)`, which results in `15px` (1.5 times `10px`).
+- This enables the reuse of the padding calculation with different inputs.
+
+### Inheritance in Sass
+
+In Sass, inheritance allows one selector to inherit styles from another selector using the `@extend` directive. This is useful for sharing common styling between selectors, reducing code duplication.
+
+#### Example of Inheritance in Sass
+
+```scss
+// Define a base class for button styling
+%base-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+// Extend the base button styles for specific buttons
+.button-primary {
+    @extend %base-button;
+    background-color: $primary-color;
+    color: #fff;
+}
+
+.button-secondary {
+    @extend %base-button;
+    background-color: $secondary-color;
+    color: #fff;
+}
+```
+
+**Explanation**:
+- `%base-button` is a **placeholder selector** that defines common button styles.
+- `.button-primary` and `.button-secondary` use `@extend %base-button` to inherit styles from `%base-button`.
+- Each button then applies unique properties (`background-color` and `color`), allowing them to share the base styling without duplicating code.
+
+### Compiled CSS Output
+
+Here’s the compiled CSS output for the examples above:
+
+```css
+body {
+    color: #3498db;
+    font-size: 24px;
+}
+
+.footer {
+    background-color: #2ecc71;
+    font-size: 14px;
+}
+
+.container {
+    padding: 15px;
+    background-color: #3498db;
+}
+
+.button-primary,
+.button-secondary {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.button-primary {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.button-secondary {
+    background-color: #2ecc71;
+    color: #fff;
+}
+```
+
+### Summary
+
+- **Variables**: Store values like colors and font sizes, improving consistency and making updates easier.
+- **Functions**: Perform calculations or transformations on values, such as calculating padding dynamically.
+- **Inheritance**: Reduces redundancy by allowing selectors to inherit styles from others, commonly using placeholder selectors.
+
+Sass variables, functions, and inheritance help make styling more modular, maintainable, and consistent across projects.
+-->

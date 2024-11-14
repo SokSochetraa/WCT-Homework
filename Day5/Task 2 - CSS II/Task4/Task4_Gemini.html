@@ -1,0 +1,67 @@
+<!--
+**Variables in Sass**
+
+Variables allow you to store reusable values, such as colors, fonts, or spacing. This helps maintain consistency throughout your stylesheet and makes it easier to update styles globally. 
+
+**Example:**
+
+```scss
+$primary-color: #333;
+$secondary-color: #f00;
+
+.button {
+  background-color: $primary-color;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.error-message {
+  color: $secondary-color;
+}
+```
+
+**Functions in Sass**
+
+Functions allow you to create reusable blocks of code that can perform calculations or manipulate values. This can help reduce redundancy and make your code more efficient and flexible.
+
+**Example:**
+
+```scss
+@function lighten($color, $amount) {
+  @return lighten($color, $amount * 1%);
+}
+
+.button {
+  background-color: lighten(#333, 20);
+}
+```
+
+**Inheritance in Sass**
+
+Inheritance allows you to create parent-child relationships between selectors. This means that child selectors can inherit properties from their parent selectors. This can help reduce code duplication and make your stylesheets more organized.
+
+**Example:**
+
+```scss
+.base-style {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.heading {
+  @extend .base-style;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.paragraph {
+  @extend .base-style;
+  margin-bottom: 10px;
+}
+```
+
+In this example, the `.heading` and `.paragraph` classes inherit the `font-size` and `line-height` properties from the `.base-style` class. This reduces code duplication and makes it easier to maintain consistent styles.
+
+By effectively using variables, functions, and inheritance, you can write more efficient, maintainable, and scalable CSS.
+-->
