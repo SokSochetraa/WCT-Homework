@@ -1,0 +1,94 @@
+<!--
+**Aligning Elements in CSS**
+
+CSS provides several properties to align elements within a webpage.
+
+**Text Alignment**
+
+* **text-align:** Aligns the text within a block-level element.
+  * `text-align: left;`
+  * `text-align: center;`
+  * `text-align: right;`
+  * `text-align: justify;`
+
+**Vertical Alignment**
+
+* **vertical-align:** Aligns the content within a table cell or inline-block element.
+  * `vertical-align: top;`
+  * `vertical-align: middle;`
+  * `vertical-align: bottom;`
+  * `vertical-align: baseline;`
+
+**Display Property**
+
+The `display` property controls how elements are displayed on the page. It can take various values:
+
+* **block:** Elements are displayed as block-level elements, taking up the full width of their container.
+* **inline:** Elements are displayed as inline elements, not starting a new line.
+* **inline-block:** Elements are displayed as inline-block elements, combining the characteristics of inline and block elements.
+* **flex:** Elements are displayed as flex items, allowing for flexible layout and alignment using the flexbox model.
+
+**Example HTML Document**
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Alignment Example</title>
+    <style>
+      .text-align-example {
+        text-align: center;
+      }
+
+      .vertical-align-example {
+        display: inline-block;
+        vertical-align: middle;
+        border: 1px solid black;
+        padding: 10px;
+      }
+
+      .flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .flex-item {
+        border: 1px solid black;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Text Alignment</h2>
+    <p class="text-align-example">This text is centered.</p>
+
+    <h2>Vertical Alignment</h2>
+    <div class="vertical-align-example">Vertically aligned text</div>
+    <div class="vertical-align-example">Another vertically aligned text</div>
+
+    <h2>Flexbox Layout</h2>
+    <div class="flex-container">
+      <div class="flex-item">Flex item 1</div>
+      <div class="flex-item">Flex item 2</div>
+      <div class="flex-item">Flex item 3</div>
+    </div>
+  </body>
+</html>
+<!--
+
+**Explanation:**
+
+1. **Text Alignment:**
+   - The `.text-align-example` class centers the text within the paragraph.
+
+2. **Vertical Alignment:**
+   - The `.vertical-align-example` class uses `inline-block` display to allow vertical alignment.
+   - `vertical-align: middle;` aligns the content vertically within each inline-block element.
+
+3. **Flexbox Layout:**
+   - The `.flex-container` class uses `display: flex;` to create a flex container.
+   - `justify-content: space-between;` spaces the flex items evenly.
+   - `align-items: center;` vertically centers the flex items.
+
+By understanding these CSS properties and techniques, you can create well-aligned and visually appealing web layouts.
+-->

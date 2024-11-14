@@ -1,0 +1,8 @@
+/* External CSS styles: These styles apply to elements with the "external-style" class */
+
+/* Sets the text color, font size, and font family for elements with the external-style class */
+.external-style {
+  color: red; /* Sets text color to red */
+  font-size: 22px; /* Sets font size to 22px */
+  font-family: "Courier New", Courier, monospace; /* Sets font family to Courier with a monospace fallback */
+}

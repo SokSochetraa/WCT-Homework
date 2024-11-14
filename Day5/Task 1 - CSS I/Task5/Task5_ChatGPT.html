@@ -1,0 +1,73 @@
+### Applying Styles Directly Using the `style` Attribute Inline styles allow you
+to apply CSS directly to HTML elements using the `style` attribute. This method
+applies styles only to the specific element it’s attached to, making it useful
+for one-off style adjustments but less ideal for larger or multi-page projects.
+### Example HTML Document with Inline Styles ```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inline Styles Example</title>
+  </head>
+  <body>
+    <h1 style="color: darkblue; font-size: 24px; text-align: center">
+      Inline Styles in HTML
+    </h1>
+
+    <p style="color: green; font-weight: bold">
+      This paragraph has a green font color and bold text applied directly using
+      inline styles.
+    </p>
+
+    <div style="background-color: lightgray; padding: 15px">
+      <p style="color: darkred; font-size: 18px">
+        This nested paragraph has a dark red font color and is inside a div with
+        a light gray background and padding.
+      </p>
+    </div>
+
+    <button
+      style="
+        background-color: orange;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+      "
+    >
+      Click Me
+    </button>
+  </body>
+</html>
+<!--
+
+### Explanation of Inline Styles in the Example
+
+- The `<h1>` element has `color`, `font-size`, and `text-align` styles applied inline to change its appearance.
+- The first `<p>` element uses inline styles to set `color` to green and `font-weight` to bold.
+- The `<div>` element has a `background-color` of light gray and padding applied through inline styles. This affects all nested elements within the `<div>`.
+- The `<button>` element has inline styles for `background-color`, `color`, `padding`, `border`, and `cursor` to give it a custom appearance.
+
+### Pros and Cons of Using Inline Styles
+
+#### Pros of Inline Styles
+
+1. **Quick Application**: Ideal for small, quick adjustments where styles are applied to only one or two elements.
+2. **Overrides Other Styles**: Inline styles have higher specificity, so they can override styles from external stylesheets or `<style>` tags.
+3. **No External File Needed**: No need for additional CSS files, which can be beneficial for minimal or experimental projects.
+
+#### Cons of Inline Styles
+
+1. **Harder to Maintain**: Applying styles directly to elements clutters HTML, making it difficult to read and maintain, especially in larger projects.
+2. **Lack of Reusability**: Inline styles can’t be reused, so applying the same style to multiple elements requires duplicating the `style` attribute.
+3. **Inefficient for Multiple Pages**: Unlike external stylesheets, inline styles are limited to the specific HTML document, making them impractical for multi-page websites.
+4. **Specificity Issues**: Inline styles have higher specificity, which can sometimes create unexpected conflicts when combined with other CSS rules.
+
+### Inline Styles vs. External Stylesheets
+
+- **Inline styles** are ideal for simple adjustments but can create issues with readability and reusability in larger projects.
+- **External stylesheets** are preferred for maintaining consistency across pages, enabling reusability and separation of style from structure. They improve maintainability by keeping all styling in one place, making it easier to update and debug across multiple pages.
+
+For best practices, limit inline styles to quick prototypes or unique one-off styles and rely on external stylesheets for more comprehensive styling.
+-->

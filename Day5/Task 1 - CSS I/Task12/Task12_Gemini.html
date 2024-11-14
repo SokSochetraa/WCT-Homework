@@ -1,0 +1,80 @@
+<!--
+**Flexbox Layout Model**
+
+Flexbox, short for Flexible Box Layout Module, is a powerful CSS layout model designed to make it easier to create flexible and responsive layouts. It allows you to arrange items along a single axis (row or column) and distribute space between them.
+
+**Key Concepts:**
+
+* **Flex Container:** The parent element that contains flex items.
+* **Flex Item:** The child elements within the flex container.
+
+**Key Properties:**
+
+* **Flex Direction:** Determines the main axis of the flex container.
+  - `row`: Items are arranged horizontally.
+  - `row-reverse`: Items are arranged horizontally in reverse order.
+  - `column`: Items are arranged vertically.
+  - `column-reverse`: Items are arranged vertically in reverse order.
+* **Justify Content:** Aligns flex items along the main axis.
+  - `flex-start`: Items are aligned to the start of the container.
+  - `flex-end`: Items are aligned to the end of the container.
+  - `center`: Items are centered within the container.
+  - `space-between`: Items are spaced evenly with space between them.
+  - `space-around`: Items are spaced evenly with space around them.
+  - `space-evenly`: Items are spaced evenly with equal space between and around them.
+* **Align Items:** Aligns flex items along the cross axis.
+  - `stretch`: Items are stretched to fill the container.
+  - `flex-start`: Items are aligned to the start of the container.
+  - `flex-end`: Items are aligned to the end of the container.
+  - `center`: Items are centered within the container.
+  - `baseline`: Items are aligned to their baseline.
+
+**Responsive Layout Example:**
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Responsive Layout</title>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .item {
+        flex: 1 1 200px;
+        margin: 10px;
+        border: 1px solid black;
+        text-align: center;
+        padding: 20px;
+      }
+
+      @media (max-width: 768px) {
+        .item {
+          flex-basis: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 4</div>
+    </div>
+  </body>
+</html>
+<!--
+
+**Explanation:**
+
+1. **Flex Container:** The `.container` class sets the display to `flex` and `flex-wrap: wrap` to allow items to wrap to the next line on smaller screens.
+2. **Flex Items:** The `.item` class sets the `flex` property to `1 1 200px`, which means:
+   - `flex-grow`: 1 - Items can grow to fill available space.
+   - `flex-shrink`: 1 - Items can shrink if there's not enough space.
+   - `flex-basis`: 200px - Initial size of each item.
+3. **Media Query:** The media query targets screens smaller than 768px and sets the `flex-basis` of each item to `100%`, making them take up the full width of the container.
+
+This example demonstrates how Flexbox can create a responsive layout that adapts to different screen sizes. By using properties like `flex-direction`, `justify-content`, `align-items`, and `flex`, you can achieve a wide range of layouts and design patterns.
+-->

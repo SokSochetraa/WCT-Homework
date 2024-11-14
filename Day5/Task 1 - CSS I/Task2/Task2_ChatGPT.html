@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Methods Example</title>
+
+    <!-- Link to an external CSS file for applying styles across multiple pages -->
+    <link rel="stylesheet" href="Task2_ChatGPT.css" />
+
+    <!-- Internal CSS: Define styles within this page's <head> section -->
+    <style>
+      /* Internal CSS styles applied to elements with the class "internal-style" */
+      .internal-style {
+        color: green; /* Sets text color to green */
+        font-size: 20px; /* Sets font size to 20px */
+        font-family: Arial, sans-serif; /* Sets font family to Arial with a sans-serif fallback */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Demonstrating Inline, Internal, and External CSS</h1>
+
+    <!-- Inline CSS: Apply styles directly to the element using the "style" attribute -->
+    <p style="color: blue; font-size: 18px">
+      <!-- This paragraph is styled using inline CSS -->
+      This paragraph is styled using <strong>inline CSS</strong>.
+    </p>
+
+    <!-- Internal CSS: Use the "internal-style" class to apply internal styles defined in the <style> section -->
+    <p class="internal-style">
+      <!-- This paragraph is styled using internal CSS -->
+      This paragraph is styled using <strong>internal CSS</strong>.
+    </p>
+
+    <!-- External CSS: Use the "external-style" class to apply styles defined in an external CSS file -->
+    <p class="external-style">
+      <!-- This paragraph is styled using external CSS -->
+      This paragraph is styled using <strong>external CSS</strong>.
+    </p>
+  </body>
+</html>

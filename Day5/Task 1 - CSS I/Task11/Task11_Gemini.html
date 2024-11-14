@@ -1,0 +1,97 @@
+<!--
+**Tables vs. Divs for Layout**
+
+While both tables and `div` elements can be used for layout, their intended purposes and optimal use cases differ:
+
+**Tables:**
+
+* **Originally for tabular data:** Tables were designed to present data in rows and columns, like spreadsheets.
+* **Can be used for layout:** By manipulating table cells, rows, and columns, tables can be used to create basic layouts.
+* **Drawbacks for layout:** Can be complex to style, especially for complex layouts, and can lead to semantic HTML issues if used solely for layout.
+
+**Divs:**
+
+* **Generic container elements:** `div` elements are versatile and can be used to group content without specific semantic meaning.
+* **Flexible layout:** By combining `div` elements with CSS, you can create dynamic and responsive layouts.
+* **Semantic HTML:** Using `div` elements with appropriate class names can maintain semantic HTML, making your code more readable and maintainable.
+
+**Example HTML Document:**
+
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tables vs. Divs Layout</title>
+    <style>
+      /* Table Layout */
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+      }
+
+      /* Div Layout */
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .item {
+        width: 33.33%;
+        padding: 10px;
+        border: 1px solid black;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Table Layout</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>City</th>
+      </tr>
+      <tr>
+        <td>Alice</td>
+        <td>25</td>
+        <td>New York</td>
+      </tr>
+      <tr>
+        <td>Bob</td>
+        <td>30</td>
+        <td>Los Angeles</td>
+      </tr>
+    </table>
+
+    <h2>Div Layout</h2>
+    <div class="container">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+    </div>
+  </body>
+</html>
+<!--
+
+**When to Use Which:**
+
+- **Use tables for:**
+  - Simple tabular data
+  - Basic layouts with clear rows and columns
+
+- **Use divs for:**
+  - Complex layouts
+  - Responsive designs
+  - Semantic HTML
+
+**Best Practice:**
+
+While tables can be used for layout, it's generally recommended to use `div` elements and CSS for more flexible and maintainable layouts. Tables should primarily be used for their intended purpose of displaying tabular data.
+-->

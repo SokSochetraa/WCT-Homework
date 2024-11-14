@@ -1,0 +1,97 @@
+<!--
+### Online Fonts and Google Fonts
+
+**Online fonts** are fonts hosted on a server and accessed over the internet. Using online fonts allows websites to display custom fonts that may not be available on a user’s device. This approach enhances a site’s visual appeal and enables consistent typography across different devices and browsers.
+
+**Google Fonts** is a popular online font library providing free, web-safe fonts. Integrating Google Fonts is straightforward and involves linking to the font’s URL in the HTML document, which allows the browser to load and apply the font.
+
+#### How to Use Google Fonts in an HTML Document
+
+1. Go to [Google Fonts](https://fonts.google.com/) and browse the available fonts.
+2. Select the font you’d like to use, and customize it by choosing different styles (e.g., regular, bold, italic).
+3. Google Fonts provides a `<link>` tag you can copy and add to your HTML `<head>`. This link points to the font’s stylesheet.
+4. Apply the font in your CSS using the `font-family` property.
+
+#### Example: Adding Google Fonts to an HTML Document
+
+In this example, we use the font **Roboto** from Google Fonts.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Fonts Example</title>
+    <!-- Link to Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+      h1 {
+        font-weight: 700;
+      }
+      p {
+        font-weight: 400;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Using Google Fonts</h1>
+    <p>
+      This text uses the Roboto font from Google Fonts with a regular weight.
+    </p>
+  </body>
+</html>
+
+<!--
+- The `<link>` tag loads the **Roboto** font with both regular (400) and bold (700) weights.
+- In the CSS, we use `'Roboto', sans-serif` for the `font-family`, and set different weights for the heading and paragraph.
+
+---
+
+### What is a Favicon?
+
+A **favicon** (short for "favorite icon") is a small icon associated with a website, typically displayed in the browser tab, bookmarks, or address bar. Favicons help users identify websites visually, enhancing branding and user experience.
+
+To add a favicon to a website, you typically use a small image file (usually 16x16 or 32x32 pixels), often in `.ico` format, but modern browsers also support `.png` and `.svg` files.
+
+#### Example: Adding a Favicon to an HTML Document
+
+1. Create or obtain a favicon file (e.g., `favicon.ico`).
+2. Place the favicon file in the root directory of your website or a specific folder.
+3. Add a `<link>` tag in the `<head>` section to specify the favicon location.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favicon Example</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <h1>Adding a Favicon</h1>
+    <p>Check the browser tab to see the favicon icon for this page.</p>
+
+</body>
+</html>
+
+- The `<link rel="icon">` tag specifies the favicon’s path and type.
+- `href="favicon.ico"` assumes the favicon file is located in the root directory. Adjust the path if the favicon is in a different folder.
+
+**Note**: Modern favicons can be `.png` or `.svg` files. Use `type="image/png"` or `type="image/svg+xml"` accordingly.
+
+---
+
+### Summary
+
+- **Google Fonts** allows you to use custom fonts by linking to an online font stylesheet.
+- **Favicons** are small icons for website branding, visible in the browser tab or bookmarks.
+- Both features enhance a website’s visual identity, providing a more professional and polished appearance.
+-->

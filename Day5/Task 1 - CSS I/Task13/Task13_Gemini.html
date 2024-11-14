@@ -1,0 +1,90 @@
+<!--
+**CSS Variables (Custom Properties)**
+
+CSS variables, also known as custom properties, are a powerful tool in CSS that allows you to define and reuse values throughout your stylesheet. They provide a more efficient and flexible way to manage styles, especially when you need to change the same value multiple times.
+
+**How They Work:**
+
+1. **Declaration:**
+   - You declare a CSS variable using the `--` prefix followed by the variable name.
+   - The value is assigned using the `:` operator.
+   
+   ```css
+   :root {
+       --primary-color: #336699;
+       --font-family: Arial, sans-serif;
+       --font-size: 16px;
+   }
+   ```
+
+2. **Usage:**
+   - To use a CSS variable, you reference it using the `var()` function.
+   
+   ```css
+   body {
+       font-family: var(--font-family);
+       font-size: var(--font-size);
+   }
+   ```
+
+**Example:**
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Variables Example</title>
+    <style>
+      :root {
+        --primary-color: #336699;
+        --secondary-color: #f0f0f0;
+        --font-family: Arial, sans-serif;
+      }
+
+      body {
+        font-family: var(--font-family);
+        background-color: var(--secondary-color);
+      }
+
+      h1 {
+        color: var(--primary-color);
+      }
+
+      .button {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+    <button class="button">Click Me</button>
+  </body>
+</html>
+<!--
+
+**Changing Variable Values:**
+
+To change the values of CSS variables, you can either modify the declaration in the `:root` selector or use CSS media queries to target specific screen sizes or conditions.
+
+**Example of Changing Theme:**
+
+/* Light Theme */
+:root {
+    --primary-color: #336699;
+    --secondary-color: #f0f0f0;
+}
+
+/* Dark Theme */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #f0f0f0;
+        --secondary-color: #336699;
+    }
+}
+
+By changing the values of the CSS variables, you can easily modify the overall appearance of your website without having to update individual styles. This makes your stylesheets more maintainable, consistent, and easier to adapt to different themes or design changes.
+-->

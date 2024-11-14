@@ -1,0 +1,105 @@
+<!--
+**Applying Colors and Backgrounds in CSS**
+
+CSS provides several properties to control the colors and backgrounds of HTML elements.
+
+**1. Color Properties**
+
+* **Color Keyword:**
+  - Use predefined color names like `red`, `blue`, `green`, etc.
+  ```css
+  p {
+      color: blue;
+  }
+  ```
+* **Hexadecimal Color Code:**
+  - Represent a color using a six-digit hexadecimal code, specifying the intensity of red, green, and blue.
+  ```css
+  h1 {
+      color: #FF0000; /* Red */
+  }
+  ```
+* **RGB Color Code:**
+  - Specify a color using the Red, Green, and Blue color model.
+  ```css
+  div {
+      color: rgb(0, 255, 0); /* Green */
+  }
+  ```
+* **HSL Color Code:**
+  - Define a color using Hue, Saturation, and Lightness.
+  ```css
+  span {
+      color: hsl(120, 100%, 50%); /* Cyan */
+  }
+  ```
+
+**2. Background Properties**
+
+* **Background Color:**
+  - Set a solid color for the background.
+  ```css
+  body {
+      background-color: lightgray;
+  }
+  ```
+* **Background Image:**
+  - Add an image as the background.
+  ```css
+  div {
+      background-image: url('image.jpg');
+  }
+  ```
+* **Background Gradient:**
+  - Create a gradual transition between two or more colors.
+  ```css
+  header {
+      background-image: linear-gradient(to right, red, blue);
+  }
+  ```
+
+**Example HTML and CSS:**
+
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Color and Background Example</title>
+    <style>
+      body {
+        background-color: #f0f0f0;
+      }
+
+      h1 {
+        color: rgb(255, 0, 0); /* Red */
+        background-color: hsl(0, 100%, 50%); /* Red */
+      }
+
+      p {
+        color: #0000ff; /* Blue */
+        background-color: lightgreen;
+      }
+
+      div {
+        background-image: url("background.jpg");
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+    <p>This is a paragraph with a blue color and a green background.</p>
+    <div>This is a div with a background image.</div>
+  </body>
+</html>
+<!--
+
+**Explanation:**
+
+- The `body` has a light gray background.
+- The `h1` has a red text color and a red background using different color models.
+- The `p` has a blue text color and a light green background.
+- The `div` has a background image that covers the entire container.
+
+By understanding these properties and experimenting with different color and background combinations, you can create visually appealing and dynamic web pages.
+-->
