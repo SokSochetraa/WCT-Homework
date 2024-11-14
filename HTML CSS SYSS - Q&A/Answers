@@ -1,0 +1,61 @@
+  HTML Answers
+
+1.  What is HTML and why is it used? 
+--> HTML (HyperText Markup Language) is the standard language for creating web pages.
+    It describes the structure of a webpage using markup. HTML elements are the building 
+    blocks of HTML pages, and they are represented by tags.
+
+2.  What are the different types of lists in HTML? 
+--> HTML supports three types of lists:
+     -  Ordered List (`<ol>`) : A list of items in a specific order, typically numbered.
+     -  Unordered List (`<ul>`) : A list of items in no particular order, typically bulleted.
+     -  Definition List (`<dl>`) : A list of terms and their definitions.
+
+3.  How do you create a hyperlink in HTML? 
+--> You can create a hyperlink using the `<a>` tag. The `href` attribute specifies the URL of 
+    the page the link goes to. 
+    Example:
+            <a href="https://www.example.com">Visit Example</a>
+
+  CSS Answers
+
+1.  What is CSS and why is it important? 
+--> CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation 
+    of a document written in HTML or XML. CSS controls the layout, colors, fonts, and overall 
+    visual presentation of a website, making it visually appealing and responsive across different devices.
+
+2.  Can you explain the CSS box model? 
+--> The CSS box model is a fundamental concept that includes margins, borders, padding, and the 
+    content itself. Understanding this model is crucial since it affects how elements occupy space on a web page. 
+    Example:
+             .box {
+               width: 200px;
+               padding: 10px;
+               border: 5px solid black;
+               margin: 20px;
+             }
+              
+
+3.  What is Flexbox, and how does it differ from CSS Grid? 
+--> Flexbox is used for one-dimensional layouts (either row or column). CSS Grid is more powerful
+    for two-dimensional layouts as it can handle both rows and columns simultaneously.
+
+  SYSS Answers
+
+1.  What is the principle of least privilege? 
+--> The principle of least privilege is a security concept that dictates that users and systems
+    should only have the minimum level of access necessary to perform their functions. This reduces 
+    the risk of accidental or malicious damage.
+
+2.  What is a firewall and how does it work? 
+--> A firewall is a network security device that monitors and controls incoming and outgoing 
+    network traffic based on predetermined security rules. It acts as a barrier between a trusted 
+    network and an untrusted network, such as the internet.
+
+3.  What is multi-factor authentication (MFA)? 
+--> Multi-factor authentication (MFA) is a security system that requires more than one method 
+    of authentication from independent categories of credentials to verify the user's identity.
+    This typically includes something the user knows (password), something the user has (security token),
+    and something the user is (biometric verification).
+
+
