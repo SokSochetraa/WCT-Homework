@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sok Socehtra - Basic JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bayon&display=swap");
+      * {
+        margin: 0;
+        font-family: "Bayon", sans-serif;
+        padding: 0;
+        background-color: lightpink;
+        outline: none;
+        border: none;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 200px;
+        height: 100vh;
+      }
+      p {
+        color: black;
+        font-size: 128px;
+        font-weight: 500;
+      }
+      button {
+        font-size: 18px;
+        width: 250px;
+        height: 50px;
+        border-radius: 5px;
+        color: white;
+        background-color: black;
+        cursor: pointer;
+        box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.25),
+          0px -6px 8px 0px rgba(0, 0, 0, 0.25);
+        transition: all 0.3s ease-in-out;
+      }
+      button:hover {
+        transition: all 0.3s ease-in-out;
+        box-shadow: none;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="class-message">សួស្តីរ​</p>
+    <button id="id-message">- Click Me -</button>
+    <script>
+      $(document).ready(function () {
+        $("#id-message").click(function () {
+          $(".class-message").text("នំពពារ");
+        });
+      });
+    </script>
+  </body>
+</html>
